@@ -7,11 +7,14 @@
   >
   <ul>
     <li 
-      v-for="(todo, index) in todos"
-      v-bind:key="todo"
-      v-bind:title="todo"
-      v-on:remove="todos.splice(index, 1)"
-    >{{ todo }}</li>
+    v-for="(todo, index) in todos"
+    v-bind:key="todo"
+    v-bind:title="todo"
+    >
+    <!-- todos.splice(index, 1); -->
+      {{index}} {{ todo }}
+    <button @click="remove(index)">X</button>
+    </li>
   </ul>
 </div>
 </template>
@@ -36,6 +39,9 @@ export default {
     addNewTodo: function(){
       this.todos.push(this.newTodoText)
       this.newTodoText = ''
+    },
+    remove: function(index){
+      this.todos.splice(index, 1)
     }
   }
 }
