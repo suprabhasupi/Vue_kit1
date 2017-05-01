@@ -1,23 +1,25 @@
 <template>
-<p>Hello</p>
+<div>
+<p>Hello Supi!</p>
 
+<todo-list></todo-list>
 
+</div>
 </template>
-
 <script>
+import todoList from './components/todoList';
 import './styles/style.scss';
 import './app.scss';
 
 export default {
-  data() {
-    return {
-
-    }
+	components: {
+    todoList
   },
-  mounted: function () {
-
-}
-
+  data: function(){
+  	return{
+  		items: 'sdf'
+  	}
+  }
 }
 
 </script>

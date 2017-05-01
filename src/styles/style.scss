@@ -1,4 +1,4 @@
-@import './helpers';
+@import './helper';
 
 html {
   box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
   padding: 0;
   font-family: 'Open Sans';
   font-size: 14px;
-  color: #75808D;
+  color: #000;
   -webkit-font-smoothing: antialiased;
 }
 
